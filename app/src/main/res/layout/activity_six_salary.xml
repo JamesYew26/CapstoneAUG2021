@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".SixSalary">
+
+    <TextView
+        android:id="@+id/SixSalaryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Enter your 6 month salary"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <EditText
+            android:id="@+id/salary_et1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="10dp"
+            android:ems="8"
+            android:gravity="center"
+            android:hint="Month 1 salary"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/salary_et2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="10dp"
+            android:ems="8"
+            android:gravity="center"
+            android:hint="Month 2 salary"
+            android:inputType="number" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <EditText
+            android:id="@+id/salary_et3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="10dp"
+            android:ems="8"
+            android:gravity="center"
+            android:hint="Month 3 salary"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/salary_et4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="10dp"
+            android:ems="8"
+            android:gravity="center"
+            android:hint="Month 4 salary"
+            android:inputType="number" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <EditText
+            android:id="@+id/salary_et5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="10dp"
+            android:ems="8"
+            android:gravity="center"
+            android:hint="Month 5 salary"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/salary_et6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="10dp"
+            android:ems="8"
+            android:gravity="center"
+            android:hint="Month 6 salary"
+            android:inputType="number" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/SixSalaryNext_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="InvestQuestion"
+        android:text="Next" />
+
+</LinearLayout>
