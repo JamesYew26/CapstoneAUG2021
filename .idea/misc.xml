@@ -5,17 +5,20 @@
       <map>
         <entry key="..\:/Users/junch/AndroidStudioProjects/BudgetCalculator/app/src/main/res/layout/activity_commission.xml" value="0.25" />
         <entry key="..\:/Users/junch/AndroidStudioProjects/BudgetCalculator/app/src/main/res/layout/activity_commission_question.xml" value="0.2861111111111111" />
+        <entry key="..\:/Users/junch/AndroidStudioProjects/BudgetCalculator/app/src/main/res/layout/activity_credit_card.xml" value="0.33" />
         <entry key="..\:/Users/junch/AndroidStudioProjects/BudgetCalculator/app/src/main/res/layout/activity_expense.xml" value="0.25" />
         <entry key="..\:/Users/junch/AndroidStudioProjects/BudgetCalculator/app/src/main/res/layout/activity_hire_purchase.xml" value="0.25" />
         <entry key="..\:/Users/junch/AndroidStudioProjects/BudgetCalculator/app/src/main/res/layout/activity_invest.xml" value="0.33" />
         <entry key="..\:/Users/junch/AndroidStudioProjects/BudgetCalculator/app/src/main/res/layout/activity_invest_question.xml" value="0.33" />
         <entry key="..\:/Users/junch/AndroidStudioProjects/BudgetCalculator/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/junch/AndroidStudioProjects/BudgetCalculator/app/src/main/res/layout/activity_personal_loan.xml" value="0.25" />
+        <entry key="..\:/Users/junch/AndroidStudioProjects/BudgetCalculator/app/src/main/res/layout/activity_ptptn.xml" value="0.25" />
         <entry key="..\:/Users/junch/AndroidStudioProjects/BudgetCalculator/app/src/main/res/layout/activity_rental.xml" value="0.25" />
         <entry key="..\:/Users/junch/AndroidStudioProjects/BudgetCalculator/app/src/main/res/layout/activity_rental2.xml" value="0.33" />
         <entry key="..\:/Users/junch/AndroidStudioProjects/BudgetCalculator/app/src/main/res/layout/activity_salary.xml" value="0.33" />
         <entry key="..\:/Users/junch/AndroidStudioProjects/BudgetCalculator/app/src/main/res/layout/activity_six_salary.xml" value="0.33" />
         <entry key="..\:/Users/junch/AndroidStudioProjects/BudgetCalculator/app/src/main/res/layout/activity_six_salary2.xml" value="0.25" />
+        <entry key="..\:/Users/junch/AndroidStudioProjects/BudgetCalculator/app/src/main/res/layout/activity_summary.xml" value="0.19" />
         <entry key="..\:/Users/junch/AndroidStudioProjects/BudgetCalculator/app/src/main/res/layout/activity_term_loan.xml" value="0.25" />
       </map>
     </option>
