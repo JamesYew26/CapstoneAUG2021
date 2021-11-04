@@ -18,4 +18,9 @@ public class CommissionQuestion extends AppCompatActivity {
         Intent intent = new Intent(this, CommissionActivity.class);
         startActivity(intent);
     }
+
+    public void MortgageActivity(View view) {
+        Intent intent = new Intent(this, ExpenseActivity.class);
+        startActivity(intent);
+    }
 }

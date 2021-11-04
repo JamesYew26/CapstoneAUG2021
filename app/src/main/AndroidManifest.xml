@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BudgetCalculator">
         <activity
+            android:name=".ExpenseActivity"
+            android:label="WE Exclusive"
+            android:parentActivityName=".CommissionActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.budgetcalculator.CommissionActivity" />
+        </activity>
+
+        <activity
             android:name=".CommissionActivity"
             android:label="WE Exclusive"
             android:parentActivityName=".CommissionQuestion">
@@ -17,7 +26,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.budgetcalculator.CommissionQuestion" />
         </activity>
-
         <activity
             android:name=".CommissionQuestion"
             android:label="WE Exclusive"

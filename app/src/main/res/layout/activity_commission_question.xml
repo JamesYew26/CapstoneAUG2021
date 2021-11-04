@@ -39,8 +39,9 @@
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:layout_weight="1"
-            android:text="No"
-            android:layout_margin="5dp"/>
+            android:onClick="MortgageActivity"
+            android:text="No" />
     </LinearLayout>
 </LinearLayout>
