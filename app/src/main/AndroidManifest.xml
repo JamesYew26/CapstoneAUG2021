@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.budgetcalculator">
+    package="com.example.budgetcalculator" >
 
     <application
         android:allowBackup="true"
@@ -8,20 +8,38 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.BudgetCalculator">
+        android:theme="@style/Theme.BudgetCalculator" >
+        <activity
+            android:name=".PersonalLoan"
+            android:exported="true" />
+        <activity
+            android:name=".TermLoan"
+            android:label="WE Exclusive"
+            android:parentActivityName=".HirePurchase" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.budgetcalculator.HirePurchase" />
+        </activity>
+        <activity
+            android:name=".HirePurchase"
+            android:label="WE Exclusive"
+            android:parentActivityName=".ExpenseActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.budgetcalculator.ExpenseActivity" />
+        </activity>
         <activity
             android:name=".ExpenseActivity"
             android:label="WE Exclusive"
-            android:parentActivityName=".CommissionActivity">
+            android:parentActivityName=".CommissionActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.budgetcalculator.CommissionActivity" />
         </activity>
-
         <activity
             android:name=".CommissionActivity"
             android:label="WE Exclusive"
-            android:parentActivityName=".CommissionQuestion">
+            android:parentActivityName=".CommissionQuestion" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.budgetcalculator.CommissionQuestion" />
@@ -29,7 +47,7 @@
         <activity
             android:name=".CommissionQuestion"
             android:label="WE Exclusive"
-            android:parentActivityName=".Rental">
+            android:parentActivityName=".Rental" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.budgetcalculator.Rental" />
@@ -37,7 +55,7 @@
         <activity
             android:name=".Rental"
             android:label="WE Exclusive"
-            android:parentActivityName=".RentalActivity">
+            android:parentActivityName=".RentalActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.budgetcalculator.RentalActivity" />
@@ -45,7 +63,7 @@
         <activity
             android:name=".RentalActivity"
             android:label="WE Exclusive"
-            android:parentActivityName=".InvestActivity">
+            android:parentActivityName=".InvestActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.budgetcalculator.InvestActivity" />
@@ -53,7 +71,7 @@
         <activity
             android:name=".InvestActivity"
             android:label="WE Exclusive"
-            android:parentActivityName=".InvestQuestion">
+            android:parentActivityName=".InvestQuestion" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.budgetcalculator.InvestQuestion" />
@@ -61,7 +79,7 @@
         <activity
             android:name=".InvestQuestion"
             android:label="WE Exclusive"
-            android:parentActivityName=".SixSalary">
+            android:parentActivityName=".SixSalary" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.budgetcalculator.SixSalary" />
@@ -69,7 +87,7 @@
         <activity
             android:name=".SixSalary"
             android:label="WE Exclusive"
-            android:parentActivityName=".salary_activity">
+            android:parentActivityName=".salary_activity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.budgetcalculator.salary_activity" />
@@ -77,7 +95,7 @@
         <activity
             android:name=".salary_activity"
             android:label="WE Exclusive"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.budgetcalculator.MainActivity" />
@@ -85,7 +103,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="WE Exclusive">
+            android:label="WE Exclusive" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

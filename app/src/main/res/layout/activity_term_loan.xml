@@ -2,29 +2,30 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:layout_gravity="center"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".ExpenseActivity">
+    tools:context=".TermLoan">
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="How much is your mortgage for 6 motnhs ?"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_margin="5dp"/>
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="How much is your term loan for 6 motnhs ?"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/Mort1"
+            android:id="@+id/TL1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -32,7 +33,37 @@
             android:layout_weight="1"
             android:ems="8"
             android:gravity="center"
-            android:hint="Month 1 mortgage"
+            android:hint="Month 1 term loan"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/TL2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:ems="8"
+            android:gravity="center"
+            android:hint="Month 2 term loan"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/TL3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:ems="8"
+            android:gravity="center"
+            android:hint="Month 3 term loan"
             android:inputType="number" />
 
         <EditText
@@ -44,17 +75,17 @@
             android:layout_weight="1"
             android:ems="8"
             android:gravity="center"
-            android:hint="Month 2 mortgage"
+            android:hint="Month 4 term loan"
             android:inputType="number" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/Mort3"
+            android:id="@+id/TL5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -62,11 +93,11 @@
             android:layout_weight="1"
             android:ems="8"
             android:gravity="center"
-            android:hint="Month 3 mortgage"
+            android:hint="Month 5 term loan "
             android:inputType="number" />
 
         <EditText
-            android:id="@+id/Mort4"
+            android:id="@+id/TL6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -74,45 +105,14 @@
             android:layout_weight="1"
             android:ems="8"
             android:gravity="center"
-            android:hint="Month 4 mortgage"
+            android:hint="Month 6 term loan"
             android:inputType="number" />
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/Mort5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:ems="8"
-            android:gravity="center"
-            android:hint="Month 5 mortgage"
-            android:inputType="number" />
-
-        <EditText
-            android:id="@+id/Mort6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:ems="8"
-            android:gravity="center"
-            android:hint="Month 6 mortgage"
-            android:inputType="number" />
-    </LinearLayout>
-
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:onClick="HirePurchase"
+        android:onClick="PersonalLoan"
         android:text="Next" />
 </LinearLayout>

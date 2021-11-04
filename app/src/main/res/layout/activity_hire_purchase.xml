@@ -7,16 +7,16 @@
     android:layout_gravity="center"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".ExpenseActivity">
+    tools:context=".HirePurchase">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="How much is your mortgage for 6 motnhs ?"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_margin="5dp"/>
+        android:layout_margin="5dp"
+        android:text="How much is your hire purchase for 6 motnhs ?"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/Mort1"
+            android:id="@+id/HP1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -32,11 +32,12 @@
             android:layout_weight="1"
             android:ems="8"
             android:gravity="center"
-            android:hint="Month 1 mortgage"
-            android:inputType="number" />
+            android:hint="Month 1 hire purchase"
+            android:inputType="number"
+            android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/Comm6"
+            android:id="@+id/HP2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -44,8 +45,9 @@
             android:layout_weight="1"
             android:ems="8"
             android:gravity="center"
-            android:hint="Month 2 mortgage"
-            android:inputType="number" />
+            android:hint="Month 2 hire purchase"
+            android:inputType="number"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -54,7 +56,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/Mort3"
+            android:id="@+id/HP3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -62,11 +64,12 @@
             android:layout_weight="1"
             android:ems="8"
             android:gravity="center"
-            android:hint="Month 3 mortgage"
-            android:inputType="number" />
+            android:hint="Month 3 hire purchase"
+            android:inputType="number"
+            android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/Mort4"
+            android:id="@+id/HP4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -74,8 +77,9 @@
             android:layout_weight="1"
             android:ems="8"
             android:gravity="center"
-            android:hint="Month 4 mortgage"
-            android:inputType="number" />
+            android:hint="Month 4 hire purchase"
+            android:inputType="number"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -84,7 +88,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/Mort5"
+            android:id="@+id/HP5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -92,11 +96,12 @@
             android:layout_weight="1"
             android:ems="8"
             android:gravity="center"
-            android:hint="Month 5 mortgage"
-            android:inputType="number" />
+            android:hint="Month 5 hire purchase"
+            android:inputType="number"
+            android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/Mort6"
+            android:id="@+id/HP6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -104,8 +109,9 @@
             android:layout_weight="1"
             android:ems="8"
             android:gravity="center"
-            android:hint="Month 6 mortgage"
-            android:inputType="number" />
+            android:hint="Month 6 hire purchase"
+            android:inputType="number"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <Button
@@ -113,6 +119,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:onClick="HirePurchase"
+        android:onClick="TermLoan"
         android:text="Next" />
 </LinearLayout>

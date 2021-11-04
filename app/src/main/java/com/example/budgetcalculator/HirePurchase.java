@@ -6,16 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class ExpenseActivity extends AppCompatActivity {
+public class HirePurchase extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_expense);
+        setContentView(R.layout.activity_hire_purchase);
     }
 
-    public void HirePurchase(View view) {
-        Intent intent = new Intent(this, HirePurchase.class);
+    public void TermLoan(View view) {
+        Intent intent = new Intent(this, TermLoan.class);
         startActivity(intent);
     }
 }
