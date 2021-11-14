@@ -67,7 +67,7 @@
             android:inputType="number" />
 
         <EditText
-            android:id="@+id/Comm6"
+            android:id="@+id/Mort2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -108,11 +108,11 @@
             android:hint="Month 6 term loan"
             android:inputType="number" />
     </LinearLayout>
+
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/Insert_Btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:onClick="PersonalLoan"
         android:text="Next" />
 </LinearLayout>

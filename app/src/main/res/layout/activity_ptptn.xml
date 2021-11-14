@@ -19,18 +19,18 @@
         android:textStyle="bold" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <EditText
             android:id="@+id/PTPTN1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:ems="8"
+            android:ems="12"
             android:gravity="center"
             android:hint="Month 1 PTPTN payment"
             android:inputType="number"
@@ -38,12 +38,12 @@
 
         <EditText
             android:id="@+id/PTPTN2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:ems="8"
+            android:ems="12"
             android:gravity="center"
             android:hint="Month 2 PTPTN payment"
             android:inputType="number"
@@ -51,8 +51,8 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <EditText
@@ -62,7 +62,7 @@
             android:layout_margin="5dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:ems="8"
+            android:ems="12"
             android:gravity="center"
             android:hint="Month 3 PTPTN payment"
             android:inputType="number"
@@ -75,7 +75,7 @@
             android:layout_margin="5dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:ems="8"
+            android:ems="12"
             android:gravity="center"
             android:hint="Month 4 PTPTN payment"
             android:inputType="number"
@@ -83,8 +83,8 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <EditText
@@ -94,7 +94,7 @@
             android:layout_margin="5dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:ems="8"
+            android:ems="12"
             android:gravity="center"
             android:hint="Month 5 PTPTN payment"
             android:inputType="number"
@@ -107,7 +107,7 @@
             android:layout_margin="5dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:ems="8"
+            android:ems="12"
             android:gravity="center"
             android:hint="Month 6 PTPTN payment"
             android:inputType="number"
@@ -115,10 +115,9 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/Insert_Btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:onClick="Summary"
         android:text="Next" />
 </LinearLayout>
