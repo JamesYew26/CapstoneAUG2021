@@ -18,6 +18,7 @@ public class PTPTNDBHelper extends SQLiteOpenHelper {
     public static final String PTPTN4 = "PTPTN4";
     public static final String PTPTN5 = "PTPTN5";
     public static final String PTPTN6 = "PTPTN6";
+    public static final String PTPTNSum = "Total_PTPTN";
     public static final String Column_ID = "ID";
 
     public PTPTNDBHelper(@Nullable Context context) {
@@ -31,7 +32,8 @@ public class PTPTNDBHelper extends SQLiteOpenHelper {
         String query = "CREATE TABLE " + TABLE_NAME +
                 " (" + Column_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 PTPTN1 + " INTEGER, " + PTPTN2 + " INTEGER, " + PTPTN3 + " INTEGER, " +
-                PTPTN4 + " INTEGER, " + PTPTN5 + " INTEGER, " + PTPTN6 + " INTEGER )";
+                PTPTN4 + " INTEGER, " + PTPTN5 + " INTEGER, " + PTPTN6 + " INTEGER, " +
+                PTPTNSum + " INTEGER )";
         DB.execSQL(query);
     }
 
@@ -41,7 +43,7 @@ public class PTPTNDBHelper extends SQLiteOpenHelper {
         onCreate(DB);
     }
 
-    public void addPTPTNInfo(int PT1, int PT2, int PT3, int PT4, int PT5, int PT6) {
+    public void addPTPTNInfo(int PT1, int PT2, int PT3, int PT4, int PT5, int PT6, int PTPTNTotal) {
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues CV = new ContentValues();
 
@@ -51,13 +53,14 @@ public class PTPTNDBHelper extends SQLiteOpenHelper {
         CV.put(PTPTN4, PT4);
         CV.put(PTPTN5, PT5);
         CV.put(PTPTN6, PT6);
+        CV.put(PTPTNSum, PTPTNTotal);
 
         long result = DB.insert(TABLE_NAME, null, CV);
         if (result==-1){
             Toast.makeText(context,"Error !",Toast.LENGTH_SHORT).show();
         }
         else {
-            Toast.makeText(context,"SUCCESS !",Toast.LENGTH_SHORT).show();
+            Toast.makeText(context,"SUCCESS !" + PTPTNTotal,Toast.LENGTH_SHORT).show();
         }
     }
 

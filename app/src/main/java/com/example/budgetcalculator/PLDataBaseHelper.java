@@ -19,6 +19,7 @@ public class PLDataBaseHelper extends SQLiteOpenHelper {
     public static final String PersonalLoan4 = "PersonalLoan4";
     public static final String PersonalLoan5 = "PersonalLoan5";
     public static final String PersonalLoan6 = "PersonalLoan6";
+    public static final String PersonalLoanSum = "Total_PersonalLoan";
     public static final String Column_ID = "ID";
 
 
@@ -35,7 +36,8 @@ public class PLDataBaseHelper extends SQLiteOpenHelper {
         String createTableStatement = "CREATE TABLE " + TABLE_NAME +
                 " (" + Column_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 PersonalLoan1 + " INTEGER, " + PersonalLoan2 + " INTEGER, " + PersonalLoan3 + " INTEGER, " +
-                PersonalLoan4 + " INTEGER, " + PersonalLoan5 + " INTEGER, " + PersonalLoan6 + " INTEGER )";
+                PersonalLoan4 + " INTEGER, " + PersonalLoan5 + " INTEGER, " + PersonalLoan6 + " INTEGER, " +
+                PersonalLoanSum + " INTEGER )";
         DB.execSQL(createTableStatement);
     }
 
@@ -46,7 +48,7 @@ public class PLDataBaseHelper extends SQLiteOpenHelper {
         onCreate(DB);
     }
 
-    public void addPLInfo(int PL1, int PL2, int PL3, int PL4, int PL5, int PL6) {
+    public void addPLInfo(int PL1, int PL2, int PL3, int PL4, int PL5, int PL6, int PLSum) {
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues CV = new ContentValues();
 
@@ -56,13 +58,14 @@ public class PLDataBaseHelper extends SQLiteOpenHelper {
         CV.put(PersonalLoan4, PL4);
         CV.put(PersonalLoan5, PL5);
         CV.put(PersonalLoan6, PL6);
+        CV.put(PersonalLoanSum, PLSum);
 
         long result = DB.insert(TABLE_NAME, null, CV);
         if (result==-1){
             Toast.makeText(context,"Error !",Toast.LENGTH_SHORT).show();
         }
         else {
-            Toast.makeText(context,"SUCCESS !",Toast.LENGTH_SHORT).show();
+            Toast.makeText(context,"SUCCESS !" + PLSum,Toast.LENGTH_SHORT).show();
         }
     }
 }

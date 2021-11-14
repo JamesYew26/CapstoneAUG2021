@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class PTPTN extends AppCompatActivity {
     Button insert;
     EditText PTPTN1, PTPTN2, PTPTN3, PTPTN4, PTPTN5, PTPTN6;
+    public static int sum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,15 @@ public class PTPTN extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                int M1 = Integer.valueOf(PTPTN1.getText().toString());
+                int M2 = Integer.valueOf(PTPTN2.getText().toString());
+                int M3 = Integer.valueOf(PTPTN3.getText().toString());
+                int M4 = Integer.valueOf(PTPTN4.getText().toString());
+                int M5 = Integer.valueOf(PTPTN5.getText().toString());
+                int M6 = Integer.valueOf(PTPTN6.getText().toString());
+
+                sum = M1 + M2 + M3 + M4 + M5 + M6;
+
                 try {
                     PTPTNDBHelper ptptndbHelper = new PTPTNDBHelper(PTPTN.this);
                     ptptndbHelper.addPTPTNInfo(Integer.valueOf(PTPTN1.getText().toString()),
@@ -37,7 +47,8 @@ public class PTPTN extends AppCompatActivity {
                             Integer.valueOf(PTPTN3.getText().toString()),
                             Integer.valueOf(PTPTN4.getText().toString()),
                             Integer.valueOf(PTPTN5.getText().toString()),
-                            Integer.valueOf(PTPTN6.getText().toString()));
+                            Integer.valueOf(PTPTN6.getText().toString()),
+                            Integer.valueOf(sum));
 
                     Intent intent = new Intent(PTPTN.this,Summary.class);
                     startActivity(intent);

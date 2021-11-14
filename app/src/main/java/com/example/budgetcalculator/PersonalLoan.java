@@ -17,12 +17,12 @@ import java.util.ArrayList;
 public class PersonalLoan extends AppCompatActivity {
     Button insert;
     EditText PLoan1, PLoan2, PLoan3, PLoan4, PLoan5, PLoan6;
+    public static int sum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal_loan);
-
 
         PLoan1 = findViewById(R.id.PL1);
         PLoan2 = findViewById(R.id.PL2);
@@ -35,6 +35,16 @@ public class PersonalLoan extends AppCompatActivity {
         insert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                int M1 = Integer.valueOf(PLoan1.getText().toString());
+                int M2 = Integer.valueOf(PLoan2.getText().toString());
+                int M3 = Integer.valueOf(PLoan3.getText().toString());
+                int M4 = Integer.valueOf(PLoan4.getText().toString());
+                int M5 = Integer.valueOf(PLoan5.getText().toString());
+                int M6 = Integer.valueOf(PLoan6.getText().toString());
+
+                sum = M1 + M2 + M3 + M4 + M5 + M6;
+
                 try {
                     PLDataBaseHelper plDB = new PLDataBaseHelper(PersonalLoan.this);
                     plDB.addPLInfo(Integer.valueOf(PLoan1.getText().toString()),
@@ -42,7 +52,8 @@ public class PersonalLoan extends AppCompatActivity {
                             Integer.valueOf(PLoan3.getText().toString()),
                             Integer.valueOf(PLoan4.getText().toString()),
                             Integer.valueOf(PLoan5.getText().toString()),
-                            Integer.valueOf(PLoan6.getText().toString()));
+                            Integer.valueOf(PLoan6.getText().toString()),
+                            Integer.valueOf(sum));
 
                     Intent intent = new Intent(PersonalLoan.this,CreditCard.class);
                     startActivity(intent);

@@ -19,6 +19,7 @@ public class MortDatabaseHelper extends SQLiteOpenHelper {
     public static final String Mort4 = "Mortgage4";
     public static final String Mort5 = "Mortgage5";
     public static final String Mort6 = "Mortgage6";
+    public static final String MortSum = "Total_Mortgage";
     public static final String Column_ID = "ID";
 
     public MortDatabaseHelper(@Nullable Context context) {
@@ -31,7 +32,8 @@ public class MortDatabaseHelper extends SQLiteOpenHelper {
         String query = "CREATE TABLE " + TABLE_NAME +
                 " (" + Column_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 Mort1 + " INTEGER, " + Mort2 + " INTEGER, " + Mort3 + " INTEGER, " +
-                Mort4 + " INTEGER, " + Mort5 + " INTEGER, " + Mort6 + " INTEGER )";
+                Mort4 + " INTEGER, " + Mort5 + " INTEGER, " + Mort6 + " INTEGER, " +
+                MortSum + " INTEGER )";
         DB.execSQL(query);
     }
 
@@ -40,7 +42,7 @@ public class MortDatabaseHelper extends SQLiteOpenHelper {
         DB.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(DB);
     }
-    public void addMortgageInfo(int M1, int M2, int M3, int M4, int M5, int M6) {
+    public void addMortgageInfo(int M1, int M2, int M3, int M4, int M5, int M6, int MSum) {
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues CV = new ContentValues();
 
@@ -50,13 +52,14 @@ public class MortDatabaseHelper extends SQLiteOpenHelper {
         CV.put(Mort4, M4);
         CV.put(Mort5, M5);
         CV.put(Mort6, M6);
+        CV.put(MortSum, MSum);
 
         long result = DB.insert(TABLE_NAME, null, CV);
         if (result==-1){
             Toast.makeText(context,"Error !",Toast.LENGTH_SHORT).show();
         }
         else {
-            Toast.makeText(context,"SUCCESS !",Toast.LENGTH_SHORT).show();
+            Toast.makeText(context,"SUCCESS !" + MSum,Toast.LENGTH_SHORT).show();
         }
     }
 }

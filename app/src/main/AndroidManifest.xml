@@ -11,19 +11,23 @@
         android:theme="@style/Theme.BudgetCalculator">
         <activity
             android:name=".Summary"
-            android:exported="true" />
+            android:exported="true"
+            android:label="Summary"/>
         <activity
             android:name=".PTPTN"
-            android:exported="true" />
+            android:exported="true"
+            android:label="PTPTN Repayment"/>
         <activity
             android:name=".CreditCard"
-            android:exported="true" />
+            android:exported="true"
+            android:label="Credit Card Repayment"/>
         <activity
             android:name=".PersonalLoan"
-            android:exported="true" />
+            android:exported="true"
+            android:label="Personal Loan Repayment"/>
         <activity
             android:name=".TermLoan"
-            android:label="WE Exclusive"
+            android:label="Term Loan Repayment"
             android:parentActivityName=".HirePurchase">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -31,7 +35,7 @@
         </activity>
         <activity
             android:name=".HirePurchase"
-            android:label="WE Exclusive"
+            android:label="Hire Purchase"
             android:parentActivityName=".ExpenseActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -39,7 +43,7 @@
         </activity>
         <activity
             android:name=".ExpenseActivity"
-            android:label="WE Exclusive"
+            android:label="Mortgage"
             android:parentActivityName=".CommissionActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

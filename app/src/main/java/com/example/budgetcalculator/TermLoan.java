@@ -12,6 +12,8 @@ import android.widget.Toast;
 public class TermLoan extends AppCompatActivity {
     Button insert;
     EditText TL1, TL2, TL3, TL4, TL5, TL6;
+    public static int sum;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,15 @@ public class TermLoan extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                int M1 = Integer.valueOf(TL1.getText().toString());
+                int M2 = Integer.valueOf(TL2.getText().toString());
+                int M3 = Integer.valueOf(TL3.getText().toString());
+                int M4 = Integer.valueOf(TL4.getText().toString());
+                int M5 = Integer.valueOf(TL5.getText().toString());
+                int M6 = Integer.valueOf(TL6.getText().toString());
+
+                sum = M1 + M2 + M3 + M4 + M5 + M6;
+
                 try {
                     TLDatabaseHelper tlDatabaseHelper = new TLDatabaseHelper(TermLoan.this);
                     tlDatabaseHelper.addTermLoanInfo(Integer.valueOf(TL1.getText().toString()),
@@ -37,7 +48,8 @@ public class TermLoan extends AppCompatActivity {
                             Integer.valueOf(TL3.getText().toString()),
                             Integer.valueOf(TL4.getText().toString()),
                             Integer.valueOf(TL5.getText().toString()),
-                            Integer.valueOf(TL6.getText().toString()));
+                            Integer.valueOf(TL6.getText().toString()),
+                            Integer.valueOf(sum));
 
                     Intent intent = new Intent(TermLoan.this, PersonalLoan.class);
                     startActivity(intent);

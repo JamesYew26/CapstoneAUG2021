@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class CreditCard extends AppCompatActivity {
     Button insert;
     EditText CCard1, CCard2, CCard3, CCard4, CCard5, CCard6;
+    public static int sum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,16 @@ public class CreditCard extends AppCompatActivity {
         insert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                int M1 = Integer.valueOf(CCard1.getText().toString());
+                int M2 = Integer.valueOf(CCard2.getText().toString());
+                int M3 = Integer.valueOf(CCard3.getText().toString());
+                int M4 = Integer.valueOf(CCard4.getText().toString());
+                int M5 = Integer.valueOf(CCard5.getText().toString());
+                int M6 = Integer.valueOf(CCard6.getText().toString());
+
+                sum = M1 + M2 + M3 + M4 + M5 + M6;
+
                 try {
                     CCDatabaseHelper ccDatabaseHelper = new CCDatabaseHelper(CreditCard.this);
                     ccDatabaseHelper.addCCInfo(Integer.valueOf(CCard1.getText().toString()),
@@ -36,7 +47,8 @@ public class CreditCard extends AppCompatActivity {
                             Integer.valueOf(CCard3.getText().toString()),
                             Integer.valueOf(CCard4.getText().toString()),
                             Integer.valueOf(CCard5.getText().toString()),
-                            Integer.valueOf(CCard6.getText().toString()));
+                            Integer.valueOf(CCard6.getText().toString()),
+                            Integer.valueOf(sum));
 
 
                     Intent intent = new Intent(CreditCard.this, PTPTN.class);
