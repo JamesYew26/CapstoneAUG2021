@@ -31,16 +31,16 @@ public class PTPTN extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                int M1 = Integer.valueOf(PTPTN1.getText().toString());
-                int M2 = Integer.valueOf(PTPTN2.getText().toString());
-                int M3 = Integer.valueOf(PTPTN3.getText().toString());
-                int M4 = Integer.valueOf(PTPTN4.getText().toString());
-                int M5 = Integer.valueOf(PTPTN5.getText().toString());
-                int M6 = Integer.valueOf(PTPTN6.getText().toString());
-
-                sum = M1 + M2 + M3 + M4 + M5 + M6;
-
                 try {
+                    int M1 = Integer.valueOf(PTPTN1.getText().toString());
+                    int M2 = Integer.valueOf(PTPTN2.getText().toString());
+                    int M3 = Integer.valueOf(PTPTN3.getText().toString());
+                    int M4 = Integer.valueOf(PTPTN4.getText().toString());
+                    int M5 = Integer.valueOf(PTPTN5.getText().toString());
+                    int M6 = Integer.valueOf(PTPTN6.getText().toString());
+
+                    sum = M1 + M2 + M3 + M4 + M5 + M6;
+
                     PTPTNDBHelper ptptndbHelper = new PTPTNDBHelper(PTPTN.this);
                     ptptndbHelper.addPTPTNInfo(Integer.valueOf(PTPTN1.getText().toString()),
                             Integer.valueOf(PTPTN2.getText().toString()),

@@ -32,16 +32,17 @@ public class TermLoan extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                int M1 = Integer.valueOf(TL1.getText().toString());
-                int M2 = Integer.valueOf(TL2.getText().toString());
-                int M3 = Integer.valueOf(TL3.getText().toString());
-                int M4 = Integer.valueOf(TL4.getText().toString());
-                int M5 = Integer.valueOf(TL5.getText().toString());
-                int M6 = Integer.valueOf(TL6.getText().toString());
-
-                sum = M1 + M2 + M3 + M4 + M5 + M6;
-
                 try {
+
+                    int M1 = Integer.valueOf(TL1.getText().toString());
+                    int M2 = Integer.valueOf(TL2.getText().toString());
+                    int M3 = Integer.valueOf(TL3.getText().toString());
+                    int M4 = Integer.valueOf(TL4.getText().toString());
+                    int M5 = Integer.valueOf(TL5.getText().toString());
+                    int M6 = Integer.valueOf(TL6.getText().toString());
+
+                    sum = M1 + M2 + M3 + M4 + M5 + M6;
+
                     TLDatabaseHelper tlDatabaseHelper = new TLDatabaseHelper(TermLoan.this);
                     tlDatabaseHelper.addTermLoanInfo(Integer.valueOf(TL1.getText().toString()),
                             Integer.valueOf(TL2.getText().toString()),

@@ -32,16 +32,17 @@ public class HirePurchase extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                int M1 = Integer.valueOf(HP1.getText().toString());
-                int M2 = Integer.valueOf(HP2.getText().toString());
-                int M3 = Integer.valueOf(HP3.getText().toString());
-                int M4 = Integer.valueOf(HP4.getText().toString());
-                int M5 = Integer.valueOf(HP5.getText().toString());
-                int M6 = Integer.valueOf(HP6.getText().toString());
-
-                sum = M1 + M2 + M3 + M4 + M5 + M6;
-
                 try {
+
+                    int M1 = Integer.valueOf(HP1.getText().toString());
+                    int M2 = Integer.valueOf(HP2.getText().toString());
+                    int M3 = Integer.valueOf(HP3.getText().toString());
+                    int M4 = Integer.valueOf(HP4.getText().toString());
+                    int M5 = Integer.valueOf(HP5.getText().toString());
+                    int M6 = Integer.valueOf(HP6.getText().toString());
+
+                    sum = M1 + M2 + M3 + M4 + M5 + M6;
+
                     HPDatabaseHelper hpDatabaseHelper = new HPDatabaseHelper(HirePurchase.this);
                     hpDatabaseHelper.addHirePurchaseInfo(Integer.valueOf(HP1.getText().toString()),
                             Integer.valueOf(HP2.getText().toString()),

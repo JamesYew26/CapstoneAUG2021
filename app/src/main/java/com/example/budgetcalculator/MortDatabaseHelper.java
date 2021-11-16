@@ -2,6 +2,7 @@ package com.example.budgetcalculator;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
@@ -12,7 +13,7 @@ public class MortDatabaseHelper extends SQLiteOpenHelper {
 
     private Context context;
 
-    public static final String TABLE_NAME = "HirePurchase_Expenses";
+    public static final String TABLE_NAME = "Mortgage_Expenses";
     public static final String Mort1 = "Mortgage1";
     public static final String Mort2 = "Mortgage2";
     public static final String Mort3 = "Mortgage3";
@@ -59,7 +60,20 @@ public class MortDatabaseHelper extends SQLiteOpenHelper {
             Toast.makeText(context,"Error !",Toast.LENGTH_SHORT).show();
         }
         else {
-            Toast.makeText(context,"SUCCESS !" + MSum,Toast.LENGTH_SHORT).show();
+            Toast.makeText(context,"SUCCESS !",Toast.LENGTH_SHORT).show();
         }
     }
+
+    Cursor readMortgageData(){
+        String query = " SELECT * FROM " + TABLE_NAME;
+        SQLiteDatabase DB = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        if (DB != null){
+            DB.rawQuery(query,null);
+        }
+        return cursor;
+    }
+
+
 }

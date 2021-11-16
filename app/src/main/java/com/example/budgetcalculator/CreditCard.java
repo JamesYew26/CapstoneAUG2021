@@ -31,16 +31,17 @@ public class CreditCard extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                int M1 = Integer.valueOf(CCard1.getText().toString());
-                int M2 = Integer.valueOf(CCard2.getText().toString());
-                int M3 = Integer.valueOf(CCard3.getText().toString());
-                int M4 = Integer.valueOf(CCard4.getText().toString());
-                int M5 = Integer.valueOf(CCard5.getText().toString());
-                int M6 = Integer.valueOf(CCard6.getText().toString());
-
-                sum = M1 + M2 + M3 + M4 + M5 + M6;
-
                 try {
+
+                    int M1 = Integer.valueOf(CCard1.getText().toString());
+                    int M2 = Integer.valueOf(CCard2.getText().toString());
+                    int M3 = Integer.valueOf(CCard3.getText().toString());
+                    int M4 = Integer.valueOf(CCard4.getText().toString());
+                    int M5 = Integer.valueOf(CCard5.getText().toString());
+                    int M6 = Integer.valueOf(CCard6.getText().toString());
+
+                    sum = M1 + M2 + M3 + M4 + M5 + M6;
+
                     CCDatabaseHelper ccDatabaseHelper = new CCDatabaseHelper(CreditCard.this);
                     ccDatabaseHelper.addCCInfo(Integer.valueOf(CCard1.getText().toString()),
                             Integer.valueOf(CCard2.getText().toString()),

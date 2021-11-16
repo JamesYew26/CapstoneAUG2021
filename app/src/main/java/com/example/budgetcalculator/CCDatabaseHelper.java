@@ -63,7 +63,7 @@ public class CCDatabaseHelper extends SQLiteOpenHelper {
             Toast.makeText(context,"Error !",Toast.LENGTH_SHORT).show();
         }
         else {
-            Toast.makeText(context,"SUCCESS !" + CCSum,Toast.LENGTH_SHORT).show();
+            Toast.makeText(context,"SUCCESS !",Toast.LENGTH_SHORT).show();
         }
     }
 }

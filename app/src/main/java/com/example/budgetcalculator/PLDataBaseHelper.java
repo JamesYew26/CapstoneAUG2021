@@ -65,7 +65,7 @@ public class PLDataBaseHelper extends SQLiteOpenHelper {
             Toast.makeText(context,"Error !",Toast.LENGTH_SHORT).show();
         }
         else {
-            Toast.makeText(context,"SUCCESS !" + PLSum,Toast.LENGTH_SHORT).show();
+            Toast.makeText(context,"SUCCESS !",Toast.LENGTH_SHORT).show();
         }
     }
 }
