@@ -65,15 +65,13 @@ public class MortDatabaseHelper extends SQLiteOpenHelper {
     }
 
     Cursor readMortgageData(){
-        String query = " SELECT * FROM " + TABLE_NAME;
+        String query = " SELECT Total_Mortgage FROM " + TABLE_NAME + " WHERE ID =(SELECT max(ID) FROM Mortgage_Expenses)";
         SQLiteDatabase DB = this.getReadableDatabase();
 
         Cursor cursor = null;
         if (DB != null){
-            DB.rawQuery(query,null);
+            cursor = DB.rawQuery(query,null);
         }
         return cursor;
     }
-
-
 }

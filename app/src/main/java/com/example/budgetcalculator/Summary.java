@@ -6,12 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.database.Cursor;
 import android.os.Bundle;
-import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Summary extends AppCompatActivity {
     //Declaring databases
@@ -26,7 +23,7 @@ public class Summary extends AppCompatActivity {
     CustomAdapter customAdapter;
 
     //Declaring lists following YouTube
-    ArrayList<String> MortID, Mort1, Mort2, Mort3, Mort4, Mort5, Mort6, MortSum;
+    ArrayList<String> MortSum, HPsum, TLsum, PLsum, CCsum, PTPTNsum;;
     RecyclerView recyclerView;
 
     @Override
@@ -42,44 +39,106 @@ public class Summary extends AppCompatActivity {
         PTPTNDB = new PTPTNDBHelper(Summary.this);
         TLDB = new TLDatabaseHelper(Summary.this);
 
-        recyclerView = findViewById(R.id.RV_Mort);
+        //Recycler View
+        recyclerView = findViewById(R.id.recyclerView);
 
-        MortID = new ArrayList<>();
-        Mort1 = new ArrayList<>();
-        Mort2 = new ArrayList<>();
-        Mort3 = new ArrayList<>();
-        Mort4 = new ArrayList<>();
-        Mort5 = new ArrayList<>();
-        Mort6 = new ArrayList<>();
+        //Sum of the variables
         MortSum = new ArrayList<>();
+        HPsum = new ArrayList<>();
+        TLsum = new ArrayList<>();
+        PLsum = new ArrayList<>();
+        CCsum = new ArrayList<>();
+        PTPTNsum = new ArrayList<>();
 
-        loadDataFromDB();
+        loadDataFromMortDB();
+        loadDataFromHPDB();
+        loadDataFromTermLoanDB();
+        loadDataFromPersonalLoanDB();
+        loadDataFromCreditCardDB();
+        loadDataFromPTPTNDB();
 
-        customAdapter = new CustomAdapter(Summary.this,MortID,Mort1,Mort2,Mort3,
-                Mort4,Mort5,Mort6,MortSum);
+        customAdapter = new CustomAdapter(Summary.this,MortSum,HPsum,TLsum,PLsum,CCsum,PTPTNsum);
+
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(Summary.this));
-
     }
 
-     void loadDataFromDB() {
+
+     void loadDataFromMortDB() {
         Cursor cursor = MortDB.readMortgageData();
-        if (cursor.getCount()==0){
+
+        if (cursor == null){
             Toast.makeText(this,"No data",Toast.LENGTH_SHORT).show();
         }
         else{
             while (cursor.moveToNext()){
-                MortID.add(cursor.getString(0));
-                Mort1.add(cursor.getString(1));
-                Mort2.add(cursor.getString(2));
-                Mort3.add(cursor.getString(3));
-                Mort4.add(cursor.getString(4));
-                Mort5.add(cursor.getString(5));
-                Mort6.add(cursor.getString(6));
-                MortSum.add(cursor.getString(7));
+                MortSum.add(cursor.getString(0));
             }
         }
     }
 
+    void loadDataFromHPDB() {
+        Cursor cursor = HPDB.readHirePurchaseData();
+
+        if (cursor.getCount() == 0) {
+            Toast.makeText(this, "No data", Toast.LENGTH_SHORT).show();
+        } else {
+            while (cursor.moveToNext()) {
+                HPsum.add(cursor.getString(0));
+            }
+        }
+    }
+
+    void loadDataFromTermLoanDB() {
+        Cursor cursor = TLDB.readTermLoanData();
+
+        if (cursor == null) {
+            Toast.makeText(this, "No data", Toast.LENGTH_SHORT).show();
+        } else {
+            while (cursor.moveToNext()) {
+                TLsum.add(cursor.getString(0));
+            }
+        }
+    }
+
+        void loadDataFromPersonalLoanDB() {
+            Cursor cursor = PLDB.readPersonalLoanData();
+
+            if (cursor == null){
+                Toast.makeText(this,"No data",Toast.LENGTH_SHORT).show();
+            }
+            else{
+                while (cursor.moveToNext()){
+                    PLsum.add(cursor.getString(0));
+                }
+            }
+        }
+
+    void loadDataFromCreditCardDB() {
+        Cursor cursor = CCDB.readCreditCardData();
+
+        if (cursor == null){
+            Toast.makeText(this,"No data",Toast.LENGTH_SHORT).show();
+        }
+        else{
+            while (cursor.moveToNext()){
+                CCsum.add(cursor.getString(0));
+            }
+        }
+    }
+
+    void loadDataFromPTPTNDB() {
+        Cursor cursor = PTPTNDB.readPTPTNData();
+
+        if (cursor == null){
+            Toast.makeText(this,"No data",Toast.LENGTH_SHORT).show();
+        }
+        else{
+            while (cursor.moveToNext()){
+                PTPTNsum.add(cursor.getString(0));
+
+            }
+        }
+    }
 
 }

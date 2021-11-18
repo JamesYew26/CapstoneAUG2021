@@ -2,6 +2,7 @@ package com.example.budgetcalculator;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
@@ -62,6 +63,17 @@ public class PTPTNDBHelper extends SQLiteOpenHelper {
         else {
             Toast.makeText(context,"SUCCESS !",Toast.LENGTH_SHORT).show();
         }
+    }
+
+    Cursor readPTPTNData(){
+        String query = " SELECT Total_PTPTN FROM " + TABLE_NAME + " WHERE ID =(SELECT max(ID) FROM PTPTN_Expenses)";
+        SQLiteDatabase DB = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        if (DB != null){
+            cursor = DB.rawQuery(query,null);
+        }
+        return cursor;
     }
 
 
